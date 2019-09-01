@@ -1,0 +1,15 @@
+<div class="card">
+  <%= link_to product_path(product) do %>
+    <%= image_tag product.picture_url, class: 'card-img-top', height: '200px' %>
+    <div class="card-body">
+      <h5 class="card-title"><%= product.name %></h5>
+      <p class="card-text">Initial Price: <strong><%= number_to_currency(product.initial_price) %></strong></p>
+      <p class="card-text">Current Price: <strong><%= number_to_currency(product.final_price) %></strong></p>
+    </div>
+    <div class="card-footer">
+      <%= image_tag product.user.avatar_url, class: 'rounded-circle mr-3', size: '30x30'  %>
+      <small class="text-muted">Auctioned by <%= product.user.name %></small>
+    </div>
+  <% end %>
+
+</div>

@@ -1,0 +1,8 @@
+<li class="list-group-item d-flex justify-content-between align-items-center">
+  <span>
+    <%= image_tag bid.user.avatar_url, class: 'rounded-circle mr-3', size: '30x30'  %>
+    <small>Bid by <strong><%= bid.user.name %></strong></small>
+  </span>
+
+  <span class="badge badge-success badge-pill"><%= number_to_currency(bid.value) %></span>
+</li>
